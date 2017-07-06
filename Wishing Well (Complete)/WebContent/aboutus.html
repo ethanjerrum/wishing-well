@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Wishing Well: About Us</title>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(51.014586, -0.920710),
+    zoom:18,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<script type="text/javascript">
+function change(){
+	var image = document.getElementById('Home');
+	image.src = "HomeAfterClick.jpg"
+	
+}
+</script>
+
+<style>
+div.twwa {
+	margin-left: 293.5px;
+    margin-right: 340px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+{
+    z-index:1000;
+    position:fixed;
+    width:124px;
+    height:124px;
+    left:50%;
+    top:50%;
+    margin-left:-62px;
+    margin-right:-62px;
+    background-image:url();
+}
+body.bodymain{
+	background-color: #070707;
+	min-width: 500px; 
+}
+}
+div.wwl{
+	position: absolute;
+	top:0px;		
+	bottom:;
+}
+a.navbar-brand{
+	top: -5px;
+	bottom:;
+}
+div.home{
+	position: absolute;
+	top: 455px;
+	left: 225px;
+	          
+}
+
+div.aub{
+position: absolute;
+	top: 458px;
+	left: 1265px;
+}
+
+div.cob{
+	position: absolute;
+	top:290px;
+	left:630px;
+  
+}
+div.Emailus{
+	position: absolute;
+	top: 875px;
+	left: 460px;
+}
+div.Letter{
+	position: absolute;
+	left: 822px;
+	top: 873px;
+}
+div.wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:960px;
+    resize: both;
+    overflow: auto;
+}
+div.Telephone{
+	position: absolute;
+	left:1210px;
+	top:872px;
+}
+div.greetingmessage1{
+	position: absolute;
+	text-align: center;
+}
+div.cua{
+	position: absolute;
+	top: 450px;
+	left: 1195px;
+}
+div.staff{
+	position: relative;
+	top: 120px;
+	left: 826px;
+	
+}
+div.stafflist{
+	position: absolute;
+	top: 940px;
+	left: 455px;
+}
+#googleMap{
+	position: relative;
+	top: 26px;
+	left: 678px;
+}
+div.mapborder{
+	position: relative;
+	top: 1350px;
+	left: 615px;
+}
+div.Wheretofindus{
+	position: absolute;
+	top: 1170px;
+	left: 660px;
+}
+div.Goback{
+	position: absolute;
+	top:-820px;
+}
+</style>
+</head>
+<body class="bodymain">
+<div id="wrapper">
+<div class="twwa">
+	<img src ="TheWishingWellAnimation.jpg" />
+</div>
+<div class="home">
+		  <a href="Home.html">
+          <img src="HomeBefore.jpg" id="Home" onClick="change();"  onmouseover="this.src='HomeAfter.jpg'" onmouseout="this.src='HomeBefore.jpg'" onmouseclick="this.src='HomeAfterClick.jpg'"/>
+          </a>
+</div>
+<div class="cua">
+		  <a href="ContactUs.html">
+          <img src="ContactUsBefore.jpg" onmouseover="this.src='ContactUsAfter.jpg'" onmouseout="this.src='ContactUsBefore.jpg'" onClick="ContacUsOpenerTransitionFromHome()"  />
+          </a>
+</div>
+<div class="cob">
+	<a href="http://goo.gl/OUPgZ">
+	<img src="C0B.jpg" onmouseover="this.src='C0A.jpg'" onmouseout="this.src='C0B.jpg'" />
+	</a>
+</div>
+<div class="greetingmessage1">
+
+	<p><font color="white" face="Vermin Vibes" size="10px"> Hello There. We at the Wishing Well provide Cranial Osteopathy for Petersfield and Beyond! <br></p></font>
+</div>
+<div class="staff">
+	<img src="staff.jpg">
+</div>
+<div class="stafflist">
+	<img src="stafflist.jpg">
+</div>
+<div class="Wheretofindus">
+	<img src="Wheretofindus.jpg">
+</div>
+<div style="position: relative; left: 0; top: 0;">
+  <img src="mapborder.jpg" style="position: relative; top: 420px; left: 665px;" />
+  <div id="googleMap" style="position: relative; width:500px;height:380px;">
+</div>
+<div class="Goback">
+<a href="contactus.html"/>
+	<img src="Goback.jpg" onmouseover="this.src='Gobackafter.jpg'" onmouseout="this.src='Goback.jpg'" />
+</a>	
+</div>
+</div>
+</body>
+</html>

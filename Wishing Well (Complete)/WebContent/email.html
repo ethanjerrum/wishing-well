@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Wishing Well: Email Us</title>
+<link type="text/css" rel="stylesheet" href="defaultpageafterani.css">
+<style>
+div.twwa {
+	margin-left: 293.5px;
+    margin-right: 340px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+{
+    z-index:1000;
+    position:fixed;
+    width:124px;
+    height:124px;
+    left:50%;
+    top:50%;
+    margin-left:-62px;
+    margin-right:-62px;
+    background-image:url();
+}
+body.bodymain{
+	background-color: #070707;
+	min-width: 500px; 
+}
+}
+div.wwl{
+	position: absolute;
+	top:0px;		
+	bottom:;
+}
+a.navbar-brand{
+	top: -5px;
+	bottom:;
+}
+div.home{
+	position: absolute;
+	top: 455px;
+	left: 225px;
+	          
+}
+
+div.aub{
+position: absolute;
+	top: 458px;
+	left: 1265px;
+}
+
+div.cob{
+	position: absolute;
+	top:290px;
+	left:630px;
+  
+}
+div.Emailus{
+	position: absolute;
+	left: 460px;
+}
+div.Letter{
+	position: absolute;
+	left: 822px;
+	top: 875px;
+}
+div.wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:960px;
+    resize: both;
+    overflow: auto;
+}
+div.Telephone{
+	position: absolute;
+	left:1210px;
+	top:875px;
+}
+div.Goback{
+	position: absolute;
+	top:5px;
+}
+div.fieldset{
+	width: 50%;
+}
+#firstname{
+	width: 250px;
+	
+}
+#lastname{
+	width: 250px;
+}
+#emailaddress{
+	width: 250px;
+}
+#input_box{
+	width: 250px;
+	height: 250px;
+}
+</style>
+<script>
+function check_words(e) {
+    var BACKSPACE  = 8;
+    var DELETE     = 46;
+    var MAX_WORDS  = 500;
+    var valid_keys = [BACKSPACE, DELETE];
+    var words      = this.value.split(' ');
+
+    if (words.length >= MAX_WORDS && valid_keys.indexOf(e.keyCode) == -1) {
+        e.preventDefault();
+        words.length = MAX_WORDS;
+        this.value = words.join(' ');
+    }
+}
+
+var textarea = document.getElementById('input_box');
+textarea.addEventListener('keydown', check_words);
+textarea.addEventListener('keyup', check_words);
+</script>
+<script>
+function sendemail()
+{
+    var url = '/mail.php';
+
+    new Ajax.Request(url,{
+            onComplete:function(transport)
+            {
+                var feedback = transport.responseText.evalJSON();
+                if(feedback.result==0)
+                    alert('There was a problem sending the email, please try again.');
+            }
+        });
+
+}
+</script>
+</head>
+<body class="bodymain">
+<div id="wrapper">
+<div class="twwa">
+	<img src ="TheWishingWellAnimation.jpg" />
+</div>
+<div class="home">
+		  <a href="Home.html">
+          <img src="HomeBefore.jpg" onmouseover="this.src='HomeAfter.jpg'" onmouseout="this.src='HomeBefore.jpg'" onClick="ContacUsOpenerTransitionFromHome()"  />
+          </a>
+</div>
+<div class="aub">
+	<a href="aboutus.html">
+	<img src="AboutUsBefore.jpg" onmouseover="this.src='AboutUsAfter.jpg'" onmouseout="this.src='AboutUsBefore.jpg'" />
+	</a>
+</div>
+<div class="cob">
+	<a href="http://goo.gl/OUPgZ">
+	<img src="C0B.jpg" onmouseover="this.src='C0A.jpg'" onmouseout="this.src='C0B.jpg'" />
+	</a>
+</div>
+<div class="greetingmessage1">
+	<center>
+	<p><font color="white" face="Vermin Vibes" size="10px"> Hello, hope you are enjoying the website. If you are intrested in contacting us, below is a few ways of doing so, thank you!</p></font>
+	</center>
+</div>
+<div class = Emailus >
+	<img src="emailusafter.jpg"  />
+</div>
+<div class="Goback">
+<a href="contactus.html"/>
+	<img src="Goback.jpg" onmouseover="this.src='Gobackafter.jpg'" onmouseout="this.src='Goback.jpg'" />
+</a>	
+</div>
+<div class="emailmessageform">
+<center>
+<form action="MAILTO:" id="emailmessageform" methos="post" enctype="text/plain">
+<font face="Vermin Vibes" color="white" size=5px>First name:<br>
+<input type="text" name="firstname" id="firstname" required >
+<br>
+Last name:<br>
+<input type="text" name="lastname" id="lastname" required>
+<br>
+Email Address:<br>
+<input type="text" name="emailaddress" id="emailaddress" required >
+<br>
+Message: *Maximum 500 Words*<br>
+<textarea id="input_box"></textarea>
+<br>
+    <a href=''>
+    <input type="submit" value="Send Message" />
+    </a>
+    <input type="hidden" name="button_pressed" value="1" />
+</form>
+
+</font>
+</form> 
+</center>
+</div>
+</div>
+</body>
+</html>
