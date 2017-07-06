@@ -11,6 +11,6 @@ For .html files open .webContent
  - email.html
  - letter.html
  - phone.html
-For .img refer to /root/
+# For .img refer to /root/
 For cookie script refer to /root/WebContent/JQueryCookie
 # JQuery Source:  https://github.com/carhartl/jquery-cookie
